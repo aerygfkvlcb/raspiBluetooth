@@ -43,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
     private void processData(String data) {
         // 데이터를 처리하는 함수
         Toast.makeText(this, "Received data: " + data, Toast.LENGTH_SHORT).show();
-        // 원하는 작업 수행
+        TextView myTextView = findViewById(R.id.textView);
+        myTextView.setText(data);
+        // 텍스트뷰에 데이터를 받으면 그 데이터로 출력, 지금은 True값으로 나올 예정
         //sendSMS 함수 작성해서 여기서 실행하면 될듯
     }
 }
